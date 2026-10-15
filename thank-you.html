@@ -56,8 +56,8 @@ p{text-wrap:pretty}
 .video .play{width:72px;height:72px;border-radius:50%;background:var(--bronze-btn);display:grid;place-items:center;margin:0 auto 14px}
 .video .play svg{width:26px;height:26px;color:#fff;margin-left:4px}
 .recap{list-style:none;margin-top:36px;border-top:1px solid var(--line-dk)}
-.recap li{display:grid;grid-template-columns:96px 1fr;gap:18px;padding:18px 0;border-bottom:1px solid var(--line-dk);align-items:baseline}
-.recap span{font:500 .8125rem var(--mono);color:var(--bronze-pale)}
+.recap li{display:grid;grid-template-columns:120px 1fr;gap:18px;padding:18px 0;border-bottom:1px solid var(--line-dk);align-items:baseline}
+.recap span{white-space:nowrap;font:500 .8125rem var(--mono);color:var(--bronze-pale)}
 .recap b{font:700 1.25rem/1.25 var(--display);letter-spacing:-.01em;color:#fff}
 
 /* step 2 */
@@ -101,7 +101,7 @@ footer{background:var(--night);color:var(--on-dark-2);border-top:1px solid var(-
 footer p+p{margin-top:8px}
 
 @media (max-width:860px){.book-grid{grid-template-columns:1fr}}
-@media (max-width:760px){body{font-size:1rem}.recap li{grid-template-columns:72px 1fr;gap:12px}.vids{grid-template-columns:1fr}.rail{font-size:.6875rem}.rail li+li::before{width:12px;margin:0 6px}.bar span{display:none}}
+@media (max-width:760px){body{font-size:1rem}.recap li{grid-template-columns:1fr;gap:4px}.vids{grid-template-columns:1fr}.rail{font-size:.6875rem}.rail li+li::before{width:12px;margin:0 6px}.bar span{display:none}}
 @media (prefers-reduced-motion:reduce){*{transition:none!important}}
 .book .step{max-width:20ch}
 .book p+p{margin-top:14px}
@@ -140,7 +140,7 @@ footer p+p{margin-top:8px}
     </div>
     <ul class="recap">
       <li><span>Success #1</span><b>The business that runs itself, with zero staff</b></li>
-      <li><span>Success #2</span><b>The hands-off business for people who already have a full-time job</b></li>
+      <li><span>Success #2</span><b>The business that brings in its own members</b></li>
       <li><span>Success #3</span><b>The wellness habit that keeps members coming back</b></li>
     </ul>
   </div>
