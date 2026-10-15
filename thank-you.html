@@ -103,6 +103,19 @@ footer p+p{margin-top:8px}
 @media (max-width:860px){.book-grid{grid-template-columns:1fr}}
 @media (max-width:760px){body{font-size:1rem}.recap li{grid-template-columns:72px 1fr;gap:12px}.vids{grid-template-columns:1fr}.rail{font-size:.6875rem}.rail li+li::before{width:12px;margin:0 6px}.bar span{display:none}}
 @media (prefers-reduced-motion:reduce){*{transition:none!important}}
+.book .step{max-width:20ch}
+.book p+p{margin-top:14px}
+.trial-photo{min-height:320px;border-radius:10px;border:1px dashed rgba(246,211,164,.5);display:grid;place-items:center;text-align:center;padding:24px;color:var(--bronze-pale);font:500 .8125rem var(--mono)}
+.cal{margin-top:clamp(32px,4vw,48px);min-height:360px;border-radius:12px;background:var(--paper);border:1px dashed rgba(138,76,12,.5);display:grid;place-content:center;gap:8px;text-align:center;padding:32px;color:var(--bronze-ink);font:500 .875rem/1.6 var(--mono);box-shadow:0 40px 80px -40px rgba(0,0,0,.6)}
+.cal b{font-weight:600}
+.cal span{color:var(--ink-2);font-family:var(--body);font-size:.9375rem}
+.fine-dark{margin-top:16px;text-align:center;font-size:.9375rem;color:#E4EEE6}
+.fine-dark svg{width:14px;height:14px;vertical-align:-2px;color:var(--bronze-pale)}
+.mf-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:clamp(14px,2vw,22px);margin-top:36px}
+.mf .vid{aspect-ratio:9/12}
+.mf figcaption{margin-top:10px;font-size:.875rem;color:var(--ink-2);display:grid;gap:2px}
+.mf figcaption b{justify-self:start}
+@media (max-width:760px){.mf-grid{grid-template-columns:1fr 1fr}.trial-photo{min-height:220px}}
 </style>
 </head>
 <body>
@@ -112,56 +125,66 @@ footer p+p{margin-top:8px}
   <span>468 River Valley Road</span>
 </div></div>
 
-<!-- STEP 1: WATCH (Tiny: "Step 1: Watch the walkthrough video below" + 3 truths) -->
+<!-- STEP 1: WATCH (Tiny: "Step 1: Watch the video below" + the 3 reasons) -->
 <section class="watch on-dark">
   <div class="wrap">
     <ol class="rail">
       <li class="done"><i></i>Registered</li>
       <li class="now"><i></i>Watch</li>
-      <li><i></i>Book your visit</li>
+      <li><i></i>Try it free</li>
     </ol>
-    <h1 class="step"><b>Step 1:</b> Watch the walkthrough video below.</h1>
+    <h1 class="step"><b>Step 1:</b> Watch the business explanation video below.</h1>
     <div class="video">
       <div><div class="play"><svg viewBox="0 0 20 20" fill="currentColor"><path d="M5 3.5v13l11-6.5z"/></svg></div>
-      [EXPLAINER VIDEO · 10–15 min]<br>Recorded 15 Oct · edited by 20 Oct</div>
+      [BUSINESS EXPLANATION VIDEO · about 10 min]<br>Recorded 15 Oct · edited by 20 Oct</div>
     </div>
     <ul class="recap">
-      <li><span>Truth #1</span><b>The business that runs itself, with zero staff</b></li>
-      <li><span>Truth #2</span><b>The hands-off business for people who already have a full-time job</b></li>
-      <li><span>Truth #3</span><b>The wellness habit that keeps members coming back</b></li>
+      <li><span>Success #1</span><b>The business that runs itself, with zero staff</b></li>
+      <li><span>Success #2</span><b>The hands-off business for people who already have a full-time job</b></li>
+      <li><span>Success #3</span><b>The wellness habit that keeps members coming back</b></li>
     </ul>
   </div>
 </section>
 
-<!-- STEP 2: BOOK (Tiny: "Step 2: Ready to see it in person?" + day/time form + no obligation) -->
+<!-- STEP 2: TRY IT FREE (Nic: experience it first, photo of someone beside the room, Google Calendar below) -->
 <section class="book">
-  <div class="wrap book-grid">
-    <div>
-      <h2 class="step"><b>Step 2:</b> Ready to see it in person?</h2>
-      <p class="lead">The next step is simple: submit the form below to book an appointment with us.</p>
-      <p>Walk into a real, running Harmony outlet at 468 River Valley Road. Book a room on your phone and step inside, the way a member does. Sit down with Kenny and Summer and walk through the exact numbers for your situation. Bring your spouse, bring every question you have. We're not closing anything, just showing you how the whole thing works.</p>
+  <div class="wrap">
+    <div class="book-grid">
+      <div>
+        <h2 class="step"><b>Step 2:</b> Experience it for free, on us.</h2>
+        <p class="lead">We don't talk business until you've tried it for yourself.</p>
+        <p>Owning a Harmony outlet only makes sense if you believe in what members are paying for. So before anything else, come down to our River Valley outlet and use a private Far Infrared room, the same way a member does.</p>
+        <p>This session is normally worth <span class="todo">S$100</span>. It's yours free. If you like it, we'll show you how owning an outlet works. If not, you've had a free session on us.</p>
+      </div>
+      <figure class="trial-photo pend">[PHOTO] Person sitting beside the Far Infrared room</figure>
     </div>
-    <form class="panel" onsubmit="return false">
-      <h3>Book your appointment</h3>
-      <p class="sub">We'll confirm your slot on WhatsApp.</p>
-      <div class="field"><label for="d">Preferred day</label>
-        <select id="d" required><option value="">Choose a day</option><option>Weekday</option><option>Saturday</option><option>Sunday</option></select></div>
-      <div class="field"><label for="t">Preferred time</label>
-        <select id="t" required><option value="">Choose a time</option><option>Morning (10am–12pm)</option><option>Afternoon (2pm–5pm)</option><option>Evening (7pm–9pm)</option></select></div>
-      <button class="btn">Yes! Book my appointment! <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 10h12M11 5l5 5-5 5"/></svg></button>
-      <p class="fine"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="7" width="10" height="7" rx="1.5"/><path d="M5.5 7V5a2.5 2.5 0 0 1 5 0v2"/></svg> No obligation. Decide on your own timeline.</p>
-      <p class="note">Name, email and WhatsApp carry over from the first form · time slots to confirm</p>
-    </form>
+    <div class="cal pend">
+      <b>[GOOGLE CALENDAR BOOKING]</b>
+      <span>Free Far Infrared session · 468 River Valley Road</span>
+    </div>
+    <p class="fine-dark"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="7" width="10" height="7" rx="1.5"/><path d="M5.5 7V5a2.5 2.5 0 0 1 5 0v2"/></svg> No obligation. Decide on your own timeline.</p>
   </div>
 </section>
 
-<!-- PROOF (Tiny: "[X] Singaporeans have sat through this and booked. Here's what they said.") -->
+<!-- MASTER FRANCHISEES (Nic: 14 videos, each with a short summary) -->
 <section class="proof">
   <div class="wrap">
-    <h2><span class="todo">[X]+</span> Singaporeans have sat through this and booked. Here's what they said.</h2>
-    <div class="vids">
-      <div><div class="vid pend">[TESTIMONIAL VIDEO 1]<br>member or owner, no health claims</div><p class="cap"><span class="todo">[Member name]</span></p></div>
-      <div><div class="vid pend">[TESTIMONIAL VIDEO 2]<br>member or owner, no health claims</div><p class="cap"><span class="todo">[Name, how often they visit]</span></p></div>
+    <h2>Here's why 14 master franchisees decided to join Harmony</h2>
+    <div class="mf-grid">
+        <figure class="mf"><div class="vid pend">[VIDEO 1]</div><figcaption><b class="todo">[Name]</b><span>[One-line summary of why they joined]</span></figcaption></figure>
+        <figure class="mf"><div class="vid pend">[VIDEO 2]</div><figcaption><b class="todo">[Name]</b><span>[One-line summary of why they joined]</span></figcaption></figure>
+        <figure class="mf"><div class="vid pend">[VIDEO 3]</div><figcaption><b class="todo">[Name]</b><span>[One-line summary of why they joined]</span></figcaption></figure>
+        <figure class="mf"><div class="vid pend">[VIDEO 4]</div><figcaption><b class="todo">[Name]</b><span>[One-line summary of why they joined]</span></figcaption></figure>
+        <figure class="mf"><div class="vid pend">[VIDEO 5]</div><figcaption><b class="todo">[Name]</b><span>[One-line summary of why they joined]</span></figcaption></figure>
+        <figure class="mf"><div class="vid pend">[VIDEO 6]</div><figcaption><b class="todo">[Name]</b><span>[One-line summary of why they joined]</span></figcaption></figure>
+        <figure class="mf"><div class="vid pend">[VIDEO 7]</div><figcaption><b class="todo">[Name]</b><span>[One-line summary of why they joined]</span></figcaption></figure>
+        <figure class="mf"><div class="vid pend">[VIDEO 8]</div><figcaption><b class="todo">[Name]</b><span>[One-line summary of why they joined]</span></figcaption></figure>
+        <figure class="mf"><div class="vid pend">[VIDEO 9]</div><figcaption><b class="todo">[Name]</b><span>[One-line summary of why they joined]</span></figcaption></figure>
+        <figure class="mf"><div class="vid pend">[VIDEO 10]</div><figcaption><b class="todo">[Name]</b><span>[One-line summary of why they joined]</span></figcaption></figure>
+        <figure class="mf"><div class="vid pend">[VIDEO 11]</div><figcaption><b class="todo">[Name]</b><span>[One-line summary of why they joined]</span></figcaption></figure>
+        <figure class="mf"><div class="vid pend">[VIDEO 12]</div><figcaption><b class="todo">[Name]</b><span>[One-line summary of why they joined]</span></figcaption></figure>
+        <figure class="mf"><div class="vid pend">[VIDEO 13]</div><figcaption><b class="todo">[Name]</b><span>[One-line summary of why they joined]</span></figcaption></figure>
+        <figure class="mf"><div class="vid pend">[VIDEO 14]</div><figcaption><b class="todo">[Name]</b><span>[One-line summary of why they joined]</span></figcaption></figure>
     </div>
   </div>
 </section>
@@ -169,7 +192,7 @@ footer p+p{margin-top:8px}
 <footer>
   <div class="wrap">
     <p>© 2026 Harmony Wellness · 468 River Valley Road, Singapore 248353 · WhatsApp 8986 3688</p>
-    <p>This walkthrough is for information only. Owning a Harmony outlet is buying a business, not an investment. Every business carries risk and results are not guaranteed.</p>
+    <p>This video is for information only. Owning a Harmony outlet is buying a business, not an investment. Every business carries risk and results are not guaranteed.</p>
   </div>
 </footer>
 </body>
